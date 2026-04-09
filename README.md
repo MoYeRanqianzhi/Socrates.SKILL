@@ -1,8 +1,19 @@
 # Socrates.SKILL
 
-A dialectical thinking engine skill for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) that applies **Socratic questioning + First principles + Occam's razor** in iterative cycles.
+A dialectical thinking engine skill for AI coding agents. Applies **Socratic questioning + First principles + Occam's razor** in iterative cycles to deepen understanding before action.
 
 This skill doesn't solve problems. It deepens understanding by relentlessly questioning assumptions, reducing to irreducible truths, and rebuilding with minimal complexity.
+
+## Compatibility
+
+Built on the [open agent skills ecosystem](https://skills.sh/), this skill works with any agent that supports the Skills standard:
+
+| Agent | Status |
+|-------|--------|
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Fully supported |
+| [Copilot CLI](https://githubnext.com/projects/copilot-cli) | Compatible via skills plugin |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Compatible via skill activation |
+| Other Skills-compatible agents | Should work out of the box |
 
 ## How It Works
 
@@ -18,21 +29,33 @@ The synthesis becomes the next thesis. The cycle continues until the user interr
 
 ### Installation
 
-Copy the `skills/socrates/` directory into your project's skill directory:
+**Via Skills CLI (recommended):**
+
+Search and install from the skills ecosystem:
 
 ```bash
-cp -r skills/socrates/ /path/to/your-project/skills/socrates/
+# Find the skill
+npx skills find socrates
+
+# Install globally
+npx skills add MoYeRanqianzhi/Socrates.SKILL@socrates -g -y
 ```
 
-Or install via npx:
+**Via Git:**
 
 ```bash
-npx skills install socrates --from github:MoYeRanqianzhi/Socrates.SKILL
+# Clone and copy into your project
+git clone https://github.com/MoYeRanqianzhi/Socrates.SKILL.git
+cp -r Socrates.SKILL/skills/socrates/ /path/to/your-project/skills/socrates/
 ```
+
+**Manual:**
+
+Copy the `skills/socrates/` directory into your project's or user-level skill directory.
 
 ### Usage
 
-Trigger the skill by asking Claude Code to think deeply:
+Trigger the skill by asking your agent to think deeply:
 
 ```
 /socrates Should we use microservices or a monolith?
@@ -45,6 +68,8 @@ Think deeply about whether we should take VC funding or bootstrap.
 Question the assumptions behind our decision to migrate to Kubernetes.
 Analyze from first principles whether democracy is the best governance system.
 ```
+
+The skill activates automatically when it detects complex decisions, architectural trade-offs, philosophical questions, first-principles reasoning requests, or debates between two approaches.
 
 ## Skill Structure
 
@@ -99,7 +124,7 @@ Outputs visible thinking chain with structured rounds:
 
 ### Engine Mode (Called by Other Skills)
 
-Runs silently, returns only final synthesis:
+Runs silently, returns only final synthesis. Other skills can invoke Socrates as a pre-analysis thinking engine:
 
 ```
 [socrates-config]

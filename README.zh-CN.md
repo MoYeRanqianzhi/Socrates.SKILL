@@ -1,8 +1,19 @@
 # Socrates.SKILL
 
-一个用于 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 的辩证思维引擎技能，运用**苏格拉底诘问法 + 第一性原理 + 奥卡姆剃刀**进行迭代式深度思考。
+面向 AI 编程 Agent 的辩证思维引擎技能。运用**苏格拉底诘问法 + 第一性原理 + 奥卡姆剃刀**进行迭代式深度思考，在行动之前深化对问题的理解。
 
 这个技能不解决问题。它通过不断追问假设、还原不可约的真理、以最小复杂度重建认知，来深化对问题的理解。
+
+## 兼容性
+
+基于[开放 Agent 技能生态](https://skills.sh/)构建，支持所有兼容 Skills 标准的 Agent：
+
+| Agent | 状态 |
+|-------|------|
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | 完全支持 |
+| [Copilot CLI](https://githubnext.com/projects/copilot-cli) | 通过 skills 插件兼容 |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | 通过技能激活兼容 |
+| 其他 Skills 兼容 Agent | 开箱即用 |
 
 ## 工作原理
 
@@ -18,21 +29,33 @@
 
 ### 安装
 
-将 `skills/socrates/` 目录复制到你项目的技能目录中：
+**通过 Skills CLI 安装（推荐）：**
+
+从技能生态中搜索并安装：
 
 ```bash
-cp -r skills/socrates/ /path/to/your-project/skills/socrates/
+# 搜索技能
+npx skills find socrates
+
+# 全局安装
+npx skills add MoYeRanqianzhi/Socrates.SKILL@socrates -g -y
 ```
 
-或通过 npx 安装：
+**通过 Git 安装：**
 
 ```bash
-npx skills install socrates --from github:MoYeRanqianzhi/Socrates.SKILL
+# 克隆并复制到你的项目中
+git clone https://github.com/MoYeRanqianzhi/Socrates.SKILL.git
+cp -r Socrates.SKILL/skills/socrates/ /path/to/your-project/skills/socrates/
 ```
+
+**手动安装：**
+
+将 `skills/socrates/` 目录复制到你的项目级或用户级技能目录中。
 
 ### 使用
 
-通过要求 Claude Code 进行深度思考来触发技能：
+通过要求你的 Agent 进行深度思考来触发技能：
 
 ```
 /socrates 我们应该用微服务还是单体架构？
@@ -45,6 +68,8 @@ npx skills install socrates --from github:MoYeRanqianzhi/Socrates.SKILL
 质疑我们迁移到 Kubernetes 这个决定背后的假设。
 用第一性原理分析民主是否是最好的治理体系。
 ```
+
+当检测到复杂决策、架构权衡、哲学问题、第一性原理推理请求或两种方案之间的辩论时，技能会自动激活。
 
 ## 技能结构
 
@@ -99,7 +124,7 @@ skills/socrates/
 
 ### 引擎模式（被其他技能调用）
 
-静默运行，仅返回最终合题：
+静默运行，仅返回最终合题。其他技能可以将 Socrates 作为前置分析的思维引擎调用：
 
 ```
 [socrates-config]
