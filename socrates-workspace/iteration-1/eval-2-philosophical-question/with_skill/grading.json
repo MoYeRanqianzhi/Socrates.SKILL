@@ -1,0 +1,47 @@
+{
+  "eval_name": "eval-2-philosophical-question",
+  "expectations": [
+    {
+      "text": "has_proposition_anchor",
+      "passed": true,
+      "evidence": "Line 7: '> **Proposition Anchor:** Open source software is free.'"
+    },
+    {
+      "text": "has_multiple_rounds",
+      "passed": true,
+      "evidence": "Contains Round 1 through Round 4, each with full Thesis/Antithesis/Synthesis structure."
+    },
+    {
+      "text": "has_antithesis_with_question_type",
+      "passed": true,
+      "evidence": "Round 1: 'Clarification'; Round 2: 'Assumption Probing'; Round 3: 'Consequence Tracing'; Round 4: 'Perspective Shifting'. All four rounds name a specific question type."
+    },
+    {
+      "text": "has_shaken_assumption",
+      "passed": true,
+      "evidence": "Each round has a '**Shaken assumption**:' section. E.g. Round 1: 'The word \"free\" has a single, clear meaning...'; Round 3: 'That because many dimensions of freedom are perspectival, ALL dimensions are.'"
+    },
+    {
+      "text": "has_irreducible_facts",
+      "passed": true,
+      "evidence": "Every Synthesis opens with '**Irreducible facts**:' followed by bulleted items. All four rounds include this."
+    },
+    {
+      "text": "has_mutation_check",
+      "passed": true,
+      "evidence": "Every round ends with '**Mutation**: Yes -- ...' with an explanation of the shift. E.g. Round 4: 'The locus of freedom moved from the individual's technical capability to the community's political autonomy.'"
+    },
+    {
+      "text": "no_authority_in_synthesis",
+      "passed": true,
+      "evidence": "Synthesis sections reference structural facts and logical arguments. The FSF is discussed in Round 3 Antithesis (appropriate for stress-testing) but the Synthesis itself does not appeal to FSF authority -- it treats the four freedoms as 'one coherent ethical framework... not the only one.'"
+    },
+    {
+      "text": "rounds_show_deepening",
+      "passed": true,
+      "evidence": "R1: 'free' is ambiguous, only zero-price survives -> R2: freedom is relational, not a property of software -> R3: corrects over-relativism, identifies structural freedoms -> R4: deepest freedom is collective independence from vendor control. Each round qualitatively shifts the level of analysis."
+    }
+  ],
+  "overall_pass_rate": "8/8",
+  "comparison_to_baseline": "Baseline had 0 self-questioning, never interrogated its own 3-category framework, cited Stallman uncritically, and ended with a neat epigram. With-skill output has 4 rounds of genuine dialectic including self-correction (Round 3 catches its own over-relativism from Round 2), no authority appeals in synthesis, and progressive deepening from 'free means zero cost' to 'free means collective political autonomy.'"
+}

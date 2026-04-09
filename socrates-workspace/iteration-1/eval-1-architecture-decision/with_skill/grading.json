@@ -1,0 +1,47 @@
+{
+  "eval_name": "eval-1-architecture-decision",
+  "expectations": [
+    {
+      "text": "has_proposition_anchor",
+      "passed": true,
+      "evidence": "Line 9: '> **Proposition Anchor:** For a new e-commerce platform built by a team of 5 engineers, a microservices architecture is the appropriate choice...'"
+    },
+    {
+      "text": "has_multiple_rounds",
+      "passed": true,
+      "evidence": "Contains Round 1 through Round 4, each with Thesis/Antithesis/Synthesis structure."
+    },
+    {
+      "text": "has_antithesis_with_question_type",
+      "passed": true,
+      "evidence": "Round 1: 'Assumption Probing'; Round 2: 'Perspective Shifting'; Round 3: 'Consequence Tracing'; Round 4: 'Evidence Probing'. All four rounds name a specific question type."
+    },
+    {
+      "text": "has_shaken_assumption",
+      "passed": true,
+      "evidence": "Each round ends its Antithesis with a '**Shaken assumption:**' paragraph naming what was undermined. E.g. Round 1: 'The premise that independent scaling is a day-one requirement...'; Round 3: 'The premise that extracting a single critical service provides a net benefit...'"
+    },
+    {
+      "text": "has_irreducible_facts",
+      "passed": true,
+      "evidence": "Every Synthesis section begins with '**Irreducible facts:**' followed by a bulleted list. All four rounds include this."
+    },
+    {
+      "text": "has_mutation_check",
+      "passed": true,
+      "evidence": "Every round ends with '**Mutation:** Yes -- ...' explaining the directional shift. E.g. Round 4: 'shifted from \"the architecture is the answer\" to \"the practices are the answer; the architecture is just the starting point.\"'"
+    },
+    {
+      "text": "no_authority_in_synthesis",
+      "passed": true,
+      "evidence": "No Synthesis section cites named companies, persons, or appeals to industry authority. Arguments are grounded in structural facts (team size, operational overhead, distributed system costs)."
+    },
+    {
+      "text": "rounds_show_deepening",
+      "passed": true,
+      "evidence": "R1 thesis: microservices for scaling -> R2 thesis: modular monolith -> R3 thesis: single app with infra-level fault tolerance -> R4 thesis: practices matter more than architecture. Each round reframes at a qualitatively different level of abstraction."
+    }
+  ],
+  "overall_pass_rate": "8/8",
+  "comparison_to_baseline": "Baseline had 0 self-questioning, conclusion-first reasoning, authority appeals (Netflix, Amazon, Google), and 1-layer depth. With-skill output has 4 rounds of genuine dialectic, no authority appeals in synthesis, explicit assumption-shaking each round, and progressive deepening from 'microservices vs monolith' to 'the question itself is a proxy for engineering practices.'"
+}

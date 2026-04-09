@@ -1,0 +1,47 @@
+{
+  "eval_name": "eval-3-vague-input-anchoring",
+  "expectations": [
+    {
+      "text": "has_proposition_anchor",
+      "passed": true,
+      "evidence": "Line 9: '> **Proposition Anchor:** The primary challenge of AI safety is technical alignment -- ensuring AI systems reliably do what their designers intend.'"
+    },
+    {
+      "text": "has_multiple_rounds",
+      "passed": true,
+      "evidence": "Contains Round 1 through Round 4, each with full Thesis/Antithesis/Synthesis structure."
+    },
+    {
+      "text": "has_antithesis_with_question_type",
+      "passed": true,
+      "evidence": "Round 1: 'Assumption Probing'; Round 2: 'Clarification'; Round 3: 'Consequence Tracing'; Round 4: 'Perspective Shifting'. All four rounds name a specific question type."
+    },
+    {
+      "text": "has_shaken_assumption",
+      "passed": true,
+      "evidence": "Each round has a '**Shaken assumption:**' section. E.g. Round 1: 'The assumption that designer intent is a well-defined, stable target...'; Round 4: 'The assumption that feedback loops can always close...'"
+    },
+    {
+      "text": "has_irreducible_facts",
+      "passed": true,
+      "evidence": "Every Synthesis includes '**Irreducible facts:**' with bulleted items. All four rounds include this."
+    },
+    {
+      "text": "has_mutation_check",
+      "passed": true,
+      "evidence": "Every round ends with '**Mutation:** Yes.' and an explanation. E.g. Round 3: 'The ill-definition transformed from obstacle to design requirement.'"
+    },
+    {
+      "text": "no_authority_in_synthesis",
+      "passed": true,
+      "evidence": "No Synthesis section appeals to named researchers, organizations, or established concepts as proof-stoppers. Arguments are built from structural reasoning about feedback loops, power asymmetry, and risk categories."
+    },
+    {
+      "text": "rounds_show_deepening",
+      "passed": true,
+      "evidence": "R1: safety is social/political, not just technical -> R2: both targets are ill-defined -> R3: ill-definition is navigable via adaptive process -> R4: process alone fails for catastrophic risks, need two regimes. Each round reframes at a deeper level, and the vague input 'think about AI safety' is progressively sharpened into a specific structural insight."
+    }
+  ],
+  "overall_pass_rate": "8/8",
+  "comparison_to_baseline": "Baseline had 0 self-questioning, filled vague input with a flat encyclopedia taxonomy, dropped established concepts ('Goodhart's Law', 'deceptive alignment') as proof-stoppers, and admitted it was being shallow. With-skill output constructs a debatable proposition from the vague input, runs 4 rounds of genuine dialectic, and arrives at a structural insight (two distinct safety regimes) that the baseline never approached."
+}
