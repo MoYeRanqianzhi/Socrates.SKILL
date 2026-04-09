@@ -1,0 +1,82 @@
+[
+  {
+    "query": "We're debating whether to go with a monorepo or polyrepo for our 12-person platform team. The backend is Go, frontend is React, and we've got 3 shared libraries. I want to really dig into the trade-offs before committing.",
+    "should_trigger": true
+  },
+  {
+    "query": "I keep going back and forth on whether to use server-side rendering or client-side for our marketing site. Every time I think I've decided, I find another argument. Help me think through this properly from the ground up.",
+    "should_trigger": true
+  },
+  {
+    "query": "Our CTO says we need to migrate to Kubernetes but I'm not convinced. Can you question the assumptions behind this decision? What are we really trying to solve?",
+    "should_trigger": true
+  },
+  {
+    "query": "I've been thinking about free will vs determinism and I can't get past the compatibilist position. Can you challenge my assumptions and help me think deeper?",
+    "should_trigger": true
+  },
+  {
+    "query": "Think about whether democracy is actually the best system of governance, using first principles reasoning. Don't just give me the standard arguments.",
+    "should_trigger": true
+  },
+  {
+    "query": "We're about to choose between PostgreSQL and DynamoDB for our event sourcing system. Before we commit, I want to strip away all the hype and think about what we actually need from first principles.",
+    "should_trigger": true
+  },
+  {
+    "query": "Everyone on my team keeps saying 'microservices' but nobody can explain WHY for our specific case. Can you help me question whether that's actually the right call?",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to deeply analyze whether our startup should take VC funding or bootstrap. There are hidden assumptions on both sides that I want to expose before making this decision.",
+    "should_trigger": true
+  },
+  {
+    "query": "Is consciousness reducible to computation? I want a rigorous dialectical analysis, not surface-level philosophy.",
+    "should_trigger": true
+  },
+  {
+    "query": "/socrates Should we build or buy our observability stack?",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix the typo on line 42 of src/utils.ts where it says 'reuslt' instead of 'result'.",
+    "should_trigger": false
+  },
+  {
+    "query": "What's the syntax for a Python list comprehension with a conditional?",
+    "should_trigger": false
+  },
+  {
+    "query": "Run the test suite and tell me which tests are failing.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a logout button to the navbar component. It should call the /api/auth/logout endpoint and redirect to the login page.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you refactor this function to use async/await instead of callbacks? Here's the code: [code block]",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to set up a GitHub Actions CI pipeline for our Node.js project. It should run lint, test, and build on every PR.",
+    "should_trigger": false
+  },
+  {
+    "query": "Delete the unused imports in src/components/Dashboard.tsx and fix the ESLint warnings.",
+    "should_trigger": false
+  },
+  {
+    "query": "What does the CAP theorem say? Just give me a quick summary.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a migration script to add a 'last_login' column to the users table in PostgreSQL.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write unit tests for the calculateDiscount function in src/pricing.ts. Cover edge cases like zero quantity and negative prices.",
+    "should_trigger": false
+  }
+]
