@@ -1,0 +1,26 @@
+{
+  "skill_name": "socrates",
+  "evals": [
+    {
+      "id": 1,
+      "name": "architecture-decision",
+      "prompt": "We need to decide whether to use microservices or a monolith for our new e-commerce platform. The team has 5 engineers. Think deeply about this.",
+      "expected_output": "Multiple rounds of dialectical analysis that progressively deepens, questioning hidden assumptions like 'microservices scale better', reducing to first principles about team capacity and system complexity, producing genuinely new insights each round",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "philosophical-question",
+      "prompt": "Is open source software truly free? Analyze this from first principles.",
+      "expected_output": "Iterative dialectical exploration that deconstructs 'free' (free-as-in-beer vs free-as-in-freedom), questions assumptions about cost (maintenance, opportunity cost, community dependency), reaches non-obvious conclusions through visible reasoning chain",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "vague-input-anchoring",
+      "prompt": "Think about AI safety.",
+      "expected_output": "Startup protocol anchors vague input into a clear thesis, then runs dialectical cycles that progressively sharpen what 'safety' means, challenging anthropocentric assumptions, producing visible mutation between rounds",
+      "files": []
+    }
+  ]
+}
